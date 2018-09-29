@@ -1,0 +1,129 @@
+@import "node_modules/normalize.css/normalize.css";
+* {
+  transition: all 0.3s;
+}
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: rgba(255,255,255,0.85);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(2,12,25,0.9);
+  z-index: -1;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 1em;
+  width: 99rem;
+}
+.title {
+  color: rgba(255,255,255,0.85);
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.subtitle {
+  color: rgba(255,255,255,0.75);
+}
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 24rem;
+  height: 100%;
+}
+.sidebar .image {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem;
+  background: url("images/IMG_20170907_112721__.jpg") no-repeat center center;
+  background-size: cover;
+  filter: grayscale(50%) opacity(70%);
+  border-radius: 20rem;
+}
+.sidebar .header {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+.sidebar .menu {
+  padding-top: 2rem;
+}
+.sidebar .menu > * {
+  padding: 0.5rem 2rem;
+}
+.sidebar .menu .category {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-left: solid 0.125rem rgba(255,255,255,0.5);
+  cursor: default;
+}
+.sidebar .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar .menu ul li {
+  padding: 0.5rem 2rem;
+}
+.sidebar .menu a {
+  display: block;
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+}
+.sidebar .menu ahover {
+  text-decoration: underline;
+}
+.content {
+  box-sizing: border-box;
+  margin-left: 24rem;
+  padding-left: 2rem;
+}
+@media screen and (max-width: 99rem) {
+  .container {
+    width: auto;
+  }
+  .sidebar {
+    right: 0;
+    bottom: unset;
+    height: auto;
+    width: auto;
+    background-color: #a9bdd9;
+    color: rgba(0,0,0,0.85);
+  }
+  .sidebar .header {
+    font-size: 1.5rem;
+  }
+  .sidebar .image {
+    display: none;
+  }
+  .sidebar .menu {
+    display: none;
+  }
+  .content {
+    margin: 4rem 0;
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 0 1rem;
+  }
+}

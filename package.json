@@ -1,0 +1,12 @@
+{
+  "name": "piton4k.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/piton4k/piton4k.github.io",
+  "author": "Martin Pitoňák <piton4k@gmail.com>",
+  "license": "unlicense",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}

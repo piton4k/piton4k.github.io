@@ -1,0 +1,145 @@
+@import "node_modules/normalize.css/normalize.css"
+@import "colors"
+
+baseFontSize = 16px
+
+sidebarWidth = 24rem
+contentWidth = 75rem
+
+topbarHeight = 4rem
+
+breakPointTablet = contentWidth + sidebarWidth
+breakPointPhone = 480px
+
+*
+  transition all 0.3s
+
+html
+  font-size baseFontSize
+  font-family "Roboto", sans-serif
+  background url("images/background.jpg") no-repeat center center fixed
+  background-size cover
+  color primaryTextLight
+
+html, body
+  margin 0
+  padding 0
+  height 100%
+
+.background
+  position fixed
+  left 0
+  right 0
+  top 0
+  bottom 0
+  background-color rgba(2, 12, 25, 0.9)
+  z-index -1
+
+.container
+  position relative
+  margin 0 auto
+  padding-top 1em
+  width contentWidth + sidebarWidth
+
+.title
+  color primaryTextLight
+  font-size 3rem
+  text-decoration underline
+
+.subtitle
+  color secondaryTextLight
+
+.sidebar
+  position absolute
+  left 0
+  top 0
+  bottom 0
+  box-sizing border-box
+  width sidebarWidth
+  height 100%
+  //border-right solid 1px rgba(255, 255, 255, 0.5)
+
+  //& > *
+  //  border solid 1px rgba(255, 255, 255, 0.1)
+
+  .image
+    margin = 2rem
+    imageSize = sidebarWidth - 2 * margin
+    width imageSize
+    height imageSize
+    margin margin
+    background url("images/IMG_20170907_112721__.jpg") no-repeat center center
+    background-size cover
+    filter grayscale(50%) opacity(70%)
+    border-radius imageSize
+
+  .header
+    padding 1rem 2rem
+    font-size 2rem
+
+  .menu
+
+    padding-top 2rem
+
+    & > *
+      padding 0.5rem 2rem
+
+    .category
+      margin-top 1rem
+      padding 0.5rem 2rem
+      font-size 1.4rem
+      text-transform uppercase
+      border-left solid 0.125rem rgba(255, 255, 255, 0.5)
+      cursor default
+
+    ul
+      margin 0
+      padding 0
+      list-style none
+
+      li
+        padding 0.5rem 2rem
+
+    a
+      display block
+      text-decoration none
+      color primaryTextLight
+
+      &hover
+        text-decoration underline
+
+.content
+  box-sizing border-box
+  margin-left sidebarWidth
+  padding-left 2rem
+
+@media screen and (max-width breakPointTablet)
+  .container
+    width auto
+
+  .sidebar
+    right 0
+    bottom unset
+    height auto
+    width auto
+    background-color backgroundLight
+    color primaryTextDark
+
+    .header
+      font-size: 1.5rem
+
+    .image
+      display none
+
+    .menu
+      display none
+
+  .content
+    margin topbarHeight 0
+    width auto
+    padding 0 2rem
+
+@media screen and (max-width breakPointPhone)
+  .content
+    padding 0 1rem
+
