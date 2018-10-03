@@ -8,5 +8,8 @@
   "private": true,
   "dependencies": {
     "normalize.css": "^8.0.0"
+  },
+  "scripts": {
+    "start": "bs & stylus -w style.styl"
   }
 }
